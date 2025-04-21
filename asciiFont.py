@@ -1,10 +1,7 @@
-#HI! What this code does is it inputs a text that will turn into an ASCII art ^w^ You can also input a text file which is neat (Spaces will default to @) :)
-#---------------------------------------------------------------------
 import PIL.Image
 import os
 from os import system, name
 
-#Compatibility (I think)
 if name == "nt":
     slash = "\\"
 else:
@@ -77,7 +74,7 @@ def divFont():
     ymargin1 = 63
     divFontS2(ymargin1, xmargin)
 
-#Conversion ^^
+#Conversion 
 def pixelToChar(img):
     image = PIL.Image.open(img)
     pixels = image.getdata()
@@ -144,7 +141,7 @@ for char in text:
 
 print(ASCIItext)
 
-#Saves to a file (better to visualize) :P
+#Saves to a file (better to visualize) 
 with open("text.txt", "w") as f:
         f.write(ASCIItext)
 
@@ -152,4 +149,3 @@ while True:
     pass
 
 #---------------------------------------------------------------------
-#Not very optmized but I like it :D
